@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
           >
             <div className="w-48 h-48 xs:w-56 xs:h-56 sm:w-64 md:w-80 md:h-80 lg:w-[380px] lg:h-[380px] rounded-full overflow-hidden border-4 border-black/5 shadow-2xl">
               <img 
-                src="/sanju_bran.jpg" 
+                src={`${import.meta.env.BASE_URL}sanju_bran.jpg`} 
                 alt="Sanjeev S H" 
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
