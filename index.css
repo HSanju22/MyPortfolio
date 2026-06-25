@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans bg-white text-black;
+  }
+
+  ::selection {
+    @apply bg-black text-white;
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+}
+
+@layer components {
+  .premium-link {
+    @apply relative no-underline transition-all duration-300 ease-in-out;
+  }
+
+  .premium-link::after {
+    content: '';
+    @apply absolute left-0 -bottom-[2px] w-0 h-[1px] bg-current transition-all duration-300 ease-in-out;
+  }
+
+  .premium-link:hover::after {
+    @apply w-full;
+  }
+
+  .premium-link:hover {
+    @apply opacity-60;
+  }
+}
